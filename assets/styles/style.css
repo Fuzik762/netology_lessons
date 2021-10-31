@@ -4,22 +4,26 @@
     box-sizing: border-box;
 }
 
+html {
+    font-size: 62.5%;
+}
+
 @font-face {
     font-family: "Open-Sans-Reg";
-    src: url(https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Regular.woff);
+    src: url("../fonts/OpenSans-Regular.woff");
     font-style: normal;
     font-weight: 400;
 }
 
 @font-face {
     font-family: "Open-Sans-Bold ";
-    src: url(https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Bold.woff);
+    src: url("../fonts/OpenSans-Bold.woff");
     font-style: normal;
     font-weight: 700;
 }
 
 .header {
-    background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/banner-bg.jpg");
+    background-image: url("../images/banner-bg.jpg");
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -40,7 +44,7 @@
 .header-content {
     min-width: 1200px;
     color: #ffffff;
-    font-size: 9pt;
+    font-size: 1.2rem;
     margin-top: 25px;
     z-index: 2;
 }
@@ -82,7 +86,7 @@
 .header-content>.header-title {
     font-family: "Open-Sans-Bold", sans-serif;
     font-weight: 700;
-    font-size: 45px;
+    font-size: 4.5rem;
     line-height: 1.7;
     text-transform: uppercase;
     text-align: center;
@@ -123,12 +127,23 @@
     height: 320px;
     display: flex;
     align-items: flex-end;
+    position: relative;
+}
+
+.trands-item::before {
+    content: "";
+    position: absolute;
+    background-color: #000000;
+    opacity: 0.6;
+    height: 100%;
+    width: 100%;
 }
 
 .trands-item-wrap {
     border: 3px solid #b59f5b;
     padding: 35px;
     margin: 15px 24px;
+    z-index: 2;
 }
 
 .trands-item-wrap>.post-title {
@@ -136,22 +151,22 @@
 }
 
 .garden {
-    background-image: url(../images/garden.png);
+    background-image: url(../images/trend1.jpg);
     background-size: 100% 100%;
 }
 
 .cheese {
-    background-image: url(../images/cheese.png);
+    background-image: url(../images/trend2.jpg);
     background-size: 100% 100%;
 }
 
 .mountain {
-    background-image: url(../images/mountain.png);
+    background-image: url(../images/trend3.jpg);
     background-size: 100% 100%;
 }
 
 .limon {
-    background-image: url(../images/limon.png);
+    background-image: url(../images/trend4.jpg);
     background-size: 100% 100%;
 }
 
@@ -186,7 +201,7 @@
     color: #b59f5b;
     font-family: "Open-Sans-Bold", sans-serif;
     font-weight: 700;
-    font-size: 13px;
+    font-size: 1.3rem;
     text-decoration: none;
     text-transform: uppercase;
     line-height: 1.1;
@@ -199,7 +214,7 @@
 .post-title {
     font-family: "Open-Sans-Bold", sans-serif;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 1.4rem;
     color: #0f0d0e;
     text-transform: uppercase;
     text-decoration: none;
@@ -207,14 +222,14 @@
 }
 
 .post-row {
-    font-size: 14px;
+    font-size: 1.4rem;
     margin: 30px 0 40px;
 }
 
 .post-date {
     color: #888888;
     font-family: "Open-Sans-Reg", sans-serif;
-    font-size: 12px;
+    font-size: 1.2rem;
 }
 
 .aside-post-content .post-date {
@@ -232,7 +247,7 @@
 
 .post-text {
     font-family: "Open-Sans-Reg", sans-serif;
-    font-size: 15px;
+    font-size: 1.5rem;
     line-height: 1.6;
     margin-bottom: 15px;
 }
@@ -251,7 +266,7 @@
     text-decoration: none;
     text-align: center;
     color: #0f0d0e;
-    font-size: 9px;
+    font-size: 0.9rem;
     display: flex;
     justify-content: center;
     margin-bottom: 45px;
@@ -291,7 +306,7 @@
 .aside-post-subtitle {
     color: #0f0d0e;
     font-family: "Open-Sans-Bold", sans-serif;
-    font-size: 11px;
+    font-size: 1.1rem;
     text-decoration: none;
     line-height: 1.5;
     text-transform: uppercase;
@@ -312,7 +327,7 @@
 
 .input-item {
     width: 100%;
-    height: 48px;
+    height: 4.8rem;
     border: 1px solid #b59f5b;
     padding: 0 15px;
 }
@@ -331,7 +346,7 @@
     color: #ffffff;
     height: 48px;
     font-family: "Open-Sans-Bold", sans-serif;
-    font-size: 14px;
+    font-size: 1.4rem;
     font-weight: 700;
     text-transform: uppercase;
 }
@@ -342,7 +357,7 @@
 
 .search-button {
     width: 48px;
-    background-image: url(https://netology-code.github.io/html-2-diploma/sources/images/search.svg);
+    background-image: url("../svg/search.svg");
     background-repeat: no-repeat;
     background-size: 20px;
     background-position: center center;
@@ -367,7 +382,7 @@
 .aside-tags-link {
     text-decoration: none;
     color: #0f0d0e;
-    font-size: 16px;
+    font-size: 1.6rem;
     font-family: "Open-Sans-Bold", sans-serif;
     font-weight: 700;
     border: solid 3px #eeeeee;
@@ -406,7 +421,7 @@
 .aside-themes-link {
     text-decoration: none;
     color: #0f0d0e;
-    font-size: 16px;
+    font-size: 1.6rem;
 }
 
 .aside-themes-link:hover {
@@ -416,7 +431,7 @@
 .aside-themes-sup {
     vertical-align: super;
     color: #b59f5b;
-    font-size: 12px;
+    font-size: 1.2rem;
 }
 
 .products {
@@ -445,6 +460,7 @@
     width: 100%;
     height: 260px;
     font-family: "Open-Sans-Bold", sans-serif;
+    font-size: 1.5rem;
     text-align: left;
     margin-top: -30px;
     position: relative;
@@ -466,7 +482,7 @@
 .products-price {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: end;
 }
 
 .products-price-old {
@@ -474,7 +490,7 @@
 }
 
 .products-price-new {
-    font-size: 24px;
+    font-size: 2.4rem;
 }
 
 .buying-button {
@@ -529,23 +545,23 @@
 }
 
 .social-twitter {
-    background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/004-twitter.svg");
+    background-image: url("../svg/004-twitter.svg");
 }
 
 .social-pinterest {
-    background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/001-pinterest.svg");
+    background-image: url("../svg/001-pinterest.svg");
 }
 
 .social-facebook {
-    background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/002-facebook-logo.svg");
+    background-image: url("../svg/002-facebook-logo.svg");
 }
 
 .social-instagram {
-    background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/005-instagram.svg");
+    background-image: url("../svg/005-instagram.svg");
 }
 
 .social-tumblr {
-    background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/003-tumblr.svg");
+    background-image: url("../svg/003-tumblr.svg");
 }
 
 .copyright {
@@ -557,6 +573,6 @@
 .copyright-link {
     font-family: "Open-Sans-Bold", sans-serif;
     color: #888888;
-    font-size: 15px;
+    font-size: 1.5rem;
     text-decoration: none;
 }
