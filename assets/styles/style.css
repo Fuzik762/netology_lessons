@@ -30,6 +30,7 @@ html {
     position: relative;
     display: flex;
     justify-content: center;
+    padding-bottom: 130px;
 }
 
 .header::before {
@@ -42,10 +43,10 @@ html {
 }
 
 .header-content {
-    min-width: 1200px;
+    max-width: 1200px;
     color: #ffffff;
     font-size: 1.2rem;
-    margin-top: 25px;
+    padding-top: 25px;
     z-index: 2;
 }
 
@@ -69,13 +70,16 @@ html {
     list-style-type: none;
 }
 
+.header-menu-item:nth-last-child(n+2) {
+    margin-right: 38px;
+}
+
 .header-menu-link {
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
     font-family: "Open-Sans-Reg";
     color: #ffffff;
-    margin-right: 38px;
 }
 
 .header-menu-link:hover {
@@ -90,10 +94,8 @@ html {
     line-height: 1.7;
     text-transform: uppercase;
     text-align: center;
-    width: 740px;
-    padding-top: 100px;
-    padding-bottom: 130px;
-    margin: auto;
+    width: 65%;
+    margin: 100px auto 0 auto;
 }
 
 .main-wrap {
@@ -101,7 +103,7 @@ html {
     justify-content: space-between;
     flex-wrap: wrap;
     margin: 60px auto 0;
-    width: 1200px;
+    max-width: 1200px;
     padding: 0 15px;
 }
 
@@ -120,14 +122,18 @@ html {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin: 0 auto;
 }
 
 .trands-item {
-    width: 24%;
-    height: 320px;
+    width: 24.8%;
+    min-height: 320px;
     display: flex;
     align-items: flex-end;
+    justify-content: center;
     position: relative;
+    background-size: cover;
+    background-position: bottom;
 }
 
 .trands-item::before {
@@ -152,22 +158,18 @@ html {
 
 .garden {
     background-image: url(../images/trend1.jpg);
-    background-size: 100% 100%;
 }
 
 .cheese {
     background-image: url(../images/trend2.jpg);
-    background-size: 100% 100%;
 }
 
 .mountain {
     background-image: url(../images/trend3.jpg);
-    background-size: 100% 100%;
 }
 
 .limon {
     background-image: url(../images/trend4.jpg);
-    background-size: 100% 100%;
 }
 
 .main-content {
@@ -317,6 +319,10 @@ html {
     margin-top: 50px;
 }
 
+.search-row {
+    width: 84%;
+}
+
 .input-hidden {
     text-decoration: none;
     width: 1px;
@@ -449,16 +455,13 @@ html {
 }
 
 .products-image {
-    width: 300px;
-    height: 200px;
+    width: 86%;
     text-align: center;
 }
 
 .products-description {
     border: 3px solid #b59f5b;
     padding: 50px 20px;
-    width: 100%;
-    height: 260px;
     font-family: "Open-Sans-Bold", sans-serif;
     font-size: 1.5rem;
     text-align: left;
@@ -495,15 +498,15 @@ html {
 
 .buying-button {
     padding: 15px 25px;
-    order: 2;
 }
 
 .footer {
     margin-top: 60px;
+    padding-bottom: 40px;
 }
 
 .footer-wrap {
-    width: 1200px;
+    max-width: 1200px;
     margin: auto;
     padding: 0 15px;
 }
@@ -567,7 +570,6 @@ html {
 .copyright {
     text-align: center;
     margin-top: 70px;
-    margin-bottom: 40px;
 }
 
 .copyright-link {
@@ -575,4 +577,86 @@ html {
     color: #888888;
     font-size: 1.5rem;
     text-decoration: none;
+}
+
+@media screen and (min-width: 641px) and (max-width: 1199px) {
+    .header {
+        background-image: url(../images/banner-bg-tablet.jpg);
+    }
+    .trands-item {
+        width: 49.7%;
+    }
+    .trands-item:nth-child(n+3) {
+        margin-top: 5px;
+    }
+    .main-content {
+        width: 55%;
+    }
+    .products-item {
+        width: 48%;
+    }
+    .products-item:nth-child(n+3) {
+        margin-top: 25px;
+    }
+}
+
+@media screen and (min-width: 360px) and (max-width: 767px) {
+    .header {
+        background-image: url(../images/banner-mobile.jpg);
+        padding-bottom: 200px;
+    }
+    .header-logo-menu {
+        justify-content: center;
+    }
+    .header-logo {
+        width: 70%;
+        margin-top: 220px;
+    }
+    .header-content>.header-title {
+        width: 80%;
+        margin-top: 40px;
+    }
+    .trands-item {
+        width: 100%;
+    }
+    .trands-item:nth-child(n+2) {
+        margin-top: 5px;
+    }
+    .trands-item-wrap {
+        width: 100%;
+    }
+    .main-content {
+        width: 100%;
+    }
+    .aside-content {
+        width: 100%;
+        margin-top: 45px;
+    }
+    .products-item {
+        width: 100%;
+    }
+    .products-item:nth-child(n+2) {
+        margin-top: 25px;
+    }
+}
+
+@media screen and (min-width: 360px) and (max-width: 1199px) {
+    .posts-item {
+        flex-direction: column;
+    }
+    .post-content {
+        margin-left: 0;
+    }
+    .post-image-wrap {
+        margin-bottom: 5px;
+    }
+    .post-image {
+        width: 100%;
+    }
+    .header-menu {
+        display: none;
+    }
+    .trands-item {
+        background-size: 100%;
+    }
 }
