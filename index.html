@@ -25,12 +25,50 @@
                     <li class="header-menu-item"><a class="header-menu-link" href="#0">Контакты</a></li>
                 </ul>
             </nav>
+            <ul class="header-menu-hidden">
+                <li class="header-menu-hidden-item"></li>
+                <li class="header-menu-hidden-item"></li>
+                <li class="header-menu-hidden-item"></li>
+            </ul>
         </div>
         <h1 class="header-title">
             Блог о творчестве, спорте, и образе жизни
         </h1>
     </div>
 </header>
+
+<section class="popup__hidden">
+    <a class="aside-title-link feedback-title" href="#a">
+        <h2 class="aside-title">Ваш фидбек</h2>
+    </a>
+    <form action="" class="popup_feedback">
+        <label class="question_selected">
+        <p class="questions">Как часто вы заходите на сайт?</p>
+            <select class="question_visit" name="visit">
+                <option value="every_day">Почти каждый день</option>
+                <option value="one_day">Раз в несколько дней</option>
+                <option value="one_week">Раз в несколько недель</option>
+                <option value="one_year">Несколько раз в год</option>
+            </select>
+        </label>
+        <div class="question_radio">
+            <p class="questions ask_email">Вы подписаны на e-mail рассылку?</p>
+            <label class="question_email_group">
+                <input class="question_email" type="radio" name="email" checked>
+                <span class="answer_email">Да</span>
+            </label>
+            <label class="question_email_group">
+                <input class="question_email" type="radio" name="email"> 
+                <span class="answer_email">Нет</span>
+            </label>
+        </div>
+        <label class="question_textarea">
+            <p class="questions">Расскажите, какой контент вы хотели бы видеть на нашем сайте?</p>
+            <textarea class="question_feedback" name="feedback" cols="30" rows="6" placeholder="Может больше рецептов?"></textarea>
+        </label>
+        <button class="button popup_button" type="submit">Отправить</button>
+    </form>
+</section>
 
 <section class="trands">
     <a class="aside-title-link" href="#a">
