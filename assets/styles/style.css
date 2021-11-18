@@ -119,26 +119,23 @@ html {
 
 .popup__hidden {
     width: 390px;
-    height: 590px;
     background-color: #ffffff;
-    margin: 0 auto;
     padding: 50px 25px;
     font-size: 1.4rem;
-    position: fixed;
-    z-index: 2;
-    top: 20%;
-    left: 40%;
-    display: none;
 }
 
-.popup__hidden::before {
-    content: "";
+.popup-bg {
     position: fixed;
-    background-color: rgba(0, 0, 0, 0.5);
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
 }
 
 .popup__hidden>.feedback-title {
@@ -150,6 +147,10 @@ html {
     flex-direction: column;
     height: 100%;
     justify-content: space-evenly;
+}
+
+.popup_item:nth-child(n+2) {
+    margin-top: 30px;
 }
 
 .question_visit {
